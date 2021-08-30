@@ -8,8 +8,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,39 +22,43 @@ import javax.persistence.Transient;
 @Entity
 // 테이블명을 바꿔줄 수 있다.
 // @Table(name = "MBR")
+@SequenceGenerator(name = "member_seq_generator", sequenceName = "member_seq")
 public class Member {
 	
 	@Id
+	// 1. IDENTITY 기본 키 생성을 DB에 위임한다. (AUTO_INCREMENT)
+	// 2. SEQUENCE
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_seq_generator")
 	private Long id;
 	
 	// DDL 생성기능
-	@Column (name = "UserName", unique = true, length = 10)
+	@Column(name = "UserName", unique = true, length = 10)
 	private String name;
 	
-	private int age;
-	
-	@Enumerated (EnumType.STRING)
-	private RoleType roleType;
-	
-	// 과거버전
-	@Temporal (TemporalType.TIMESTAMP)
-	private Date createDate;
-	@Temporal (TemporalType.TIMESTAMP)
-	private Date lastModifiedDate;
-	
-	// 최신버전
-	private LocalDate testLocalDate;
-	private LocalDateTime testLocalDateTime;
-	
-	// varchar 범위를 넘어서는 큰 정보를 제한없이 넣을 때 사용한다.
-	// clob: 매핑하는 field data가 String일 때
-	// blob: 나머지 경우
-	@Lob
-	private String description;
-	
-	// DB와 관계없이 임시적으로 자유롭게 활용할 데잍
-	@Transient
-	private int temp;
+//	private int age;
+//	
+//	@Enumerated(EnumType.STRING)
+//	private RoleType roleType;
+//	
+//	// 과거버전
+//	@Temporal(TemporalType.TIMESTAMP)
+//	private Date createDate;
+//	@Temporal(TemporalType.TIMESTAMP)
+//	private Date lastModifiedDate;
+//	
+//	// 최신버전
+//	private LocalDate testLocalDate;
+//	private LocalDateTime testLocalDateTime;
+//	
+//	// varchar 범위를 넘어서는 큰 정보를 제한없이 넣을 때 사용한다.
+//	// clob: 매핑하는 field data가 String일 때
+//	// blob: 나머지 경우
+//	@Lob
+//	private String description;
+//	
+//	// DB와 관계없이 임시적으로 자유롭게 활용할 데잍
+//	@Transient
+//	private int temp;
 	
 	// class를 생성했다면 기본 생성자가 하나는 필요하다.
 	public Member() {
@@ -75,10 +82,10 @@ public class Member {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public RoleType getRoleType() {
-		return roleType;
-	}
-	public void setRoleType(RoleType roleType) {
-		this.roleType = roleType;
-	}
+//	public RoleType getRoleType() {
+//		return roleType;
+//	}
+//	public void setRoleType(RoleType roleType) {
+//		this.roleType = roleType;
+//	}
 }

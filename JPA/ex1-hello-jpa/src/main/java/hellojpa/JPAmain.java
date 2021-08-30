@@ -101,10 +101,15 @@ public class JPAmain {
 //			// Entity를 닫아버리면 더이상 변화가 일어나지 않는다.
 //			em.close();
 			
+//			Member member = new Member();
+//			member.setId(1L);
+//			member.setName("A1");
+//			member.setRoleType(RoleType.USER);
+//			
+//			em.persist(member);
+			
 			Member member = new Member();
-			member.setId(1L);
-			member.setName("A1");
-			member.setRoleType(RoleType.USER);
+			member.setName("Myname");
 			
 			em.persist(member);
 			

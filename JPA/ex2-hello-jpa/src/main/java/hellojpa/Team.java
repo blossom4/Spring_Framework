@@ -1,5 +1,8 @@
 package hellojpa;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,6 +12,8 @@ public class Team {
 	@Column(name = "team_id")
 	private Long id;
 	private String name;
+	@OneToMany(mappedBy = "team")
+	private List<Member> members = new ArrayList<>();
 	
 	// Getter and Setter
 	public Long getId() {
@@ -22,6 +27,12 @@ public class Team {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public List<Member> getMembers() {
+		return members;
+	}
+	public void setMembers(List<Member> members) {
+		this.members = members;
 	}
 	
 	

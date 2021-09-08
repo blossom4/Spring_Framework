@@ -56,6 +56,29 @@
 - yml 파일을 사용하려면 Market Place에서 Yedit을 다운로드하고 확장자를 .yml로 만들면된다.
 - yml을 사용하면 훨씬 간편하게 관리할 수 있다.
 
+6. @Getters는 호출하는것 만으로는 어떠한 변화가 있는것은 아니기 때문에 lombok을 사용하여 편리하게 세팅해도 된다.  그러나 @Setters는 어떠한 변화가 생길 수 있고 코드들이 복잡해질 수록 유지보수가 힘들어진다.
+
+7. 값 타입은 변경이 불가능하게 설계하는 것이 좋다. 
+
+   ```java
+   public class test {
+       
+       private Long id;
+       private String name;
+       
+       // 기본생성자가 있어야 reflection이나 proxy같은 것을 할 수 있다.
+       // 다만 public으로 생성하면 여러군데에서 호출 가능해지므로 protected로 보호한다.
+       protected test() {
+       }
+       
+       
+   }
+   ```
+
+8. (fetch = FetchType.LAZY) 지연로딩으로 설정해주어야 연관된 query만 선택적으로 실행한다.
+
+   default 설정은 EAGER 즉시실행이므로 하나를 불러오면 모든것이 다 끌고와진다 따라서 데이터 양이 방대할 경우 문제가 생길 수 있다.
+
 
 
 ## 겪었던 오류 모음
@@ -71,3 +94,5 @@ JUnit 버전마다 SpringBoot라는것을 지정해주는 태그가 조금씩다
 JUnit 4 = @RunWith(SpringRunner.class)
 
 @Test 를 사용하기 위한 import가 import org.junit.jupiter.api.Test; 이어야한다.
+
+어떤 것을 import할 때 @~~~~(여기 내부에서 부르면 error가 생긴다.) 따라서 외부에서 미리 improt를 하고 안에서 사용해야한다.

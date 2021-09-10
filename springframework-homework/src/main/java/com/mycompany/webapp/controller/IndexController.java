@@ -11,7 +11,7 @@ public class IndexController {
 	
 	@RequestMapping(value = "/")
 	public String Index() {
-		
+		logger.info("Run index");
 		return "index";
 	}
 	

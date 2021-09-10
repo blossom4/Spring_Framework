@@ -6,8 +6,11 @@
 <title>Footer</title>
 </head>
 <body>
+
+	<!-- 하단 고정 footer -->
 	<footer class="d-flex justify-content-center fixed-bottom mb-2">
 		<div class="fs-5">Spring framework homework - Created by Youngshin Jo :)</div>
 	</footer>
+	
 </body>
 </html>

@@ -1,23 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
 <!-- 네이게이션 바 -->
 <%@ include file="/WEB-INF/views/common/navbar.jsp"%>
-    
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-	
-		<!-- ch01/content 화면 기본구성 -->
+
+		<!-- ch02/modelAndView 화면 기본구성 -->
 		<div class="container col-4" style="margin-top: 15vh;">
 		    <div class="mb-3 d-flex">
-				<h2>✖ 예시 화면 - ch01/content</h2>
+				<h2>✖ 예시 화면 - ch02/modelAndView</h2>
 		    </div>
 		    <!-- 입력 폼 / 버튼 -->
 		    <div class="input-group mt-3 mb-4">
@@ -30,7 +27,7 @@
 		    </div>
 			
 	    </div>
-	
+
 </body>
 </html>
 

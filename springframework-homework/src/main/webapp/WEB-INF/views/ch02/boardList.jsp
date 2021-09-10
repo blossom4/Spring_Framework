@@ -54,7 +54,7 @@
 			</div>
 			
 			<div class="d-flex my-3 justify-content-end">
-				<a class="btn btn-dark col-2" href="${pageContext.request.contextPath}/ch02/boardList">Write</a>
+				<a class="btn btn-dark col-2" href="${pageContext.request.contextPath}/ch02/boardWriteForm">Write</a>
 			</div>
 		</div>
 			

@@ -46,7 +46,7 @@ public class Ch02Controller {
 		return "redirect:/ch02/content";
 	}
 	
-	@RequestMapping(value = "/modelAndView")
+	@RequestMapping(value = "/modelAndView", method = RequestMethod.GET)
 	public String modelandview() {
 		logger.info("Run ch02/modelAndView");
 		return "ch02/modelAndView";
@@ -59,10 +59,17 @@ public class Ch02Controller {
 		return "ch02/login";
 	}
 	
-	// 게시판 목록
+	// 게시물 목록
 	@RequestMapping(value = "/boardList")
 	public String boardList() {
 		logger.info("Run ch02/boardList");
 		return "ch02/boardList";
+	}
+	
+	// 게시물 작성 form
+	@RequestMapping(value = "/boardWriteForm")
+	public String boardWriteForm() {
+		logger.info("Run ch02/boardWriteForm");
+		return "ch02/boardWriteForm";
 	}
 }

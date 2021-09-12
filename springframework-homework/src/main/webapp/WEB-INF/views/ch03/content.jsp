@@ -11,6 +11,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style type="text/css">
+	.displayOn {
+		background-color: red;
+	}
+  </style>
 </head>
 <body>
 	
@@ -20,116 +25,122 @@
 				<h2>🎵 매개변수 요청 - ch03/content</h2>
 		    </div>
 			<hr class="my-3">
-			<button class="btn btn-dark me-1" onclick="requestGet()">GET 방식 요청</button>
+			<div class="d-flex justify-content-center">
+				<div class="btn btn-outline-dark me-1 col-3" id="getButtonId" onclick="getButton()">GET</div>
+				<div class="btn btn-dark me-1 col-3" id="postButtonId" onclick="postButton()">POST</div>
+				<div class="btn btn-dark me-1 col-3" id="ajaxButtonId" onclick="ajaxButton()">AJAX</div>
+			</div>
 			<!-- GET 방식으로 요청 -->
 			<div id="getMethodId">
-			<h3 class="my-3">GET Method Request</h3>
-			<!-- 1. 고정된 매개변수 GET 요청 -->
-			<h5>1. Static Parameters</h5>
-			<a class="btn btn-dark" href="getMethodRequest?param1=blossom&param2=8&param3=1.618&param4=true&param5=1993-06-02">Request</a>		
-			<!-- 2. 입력받은 매개변수 GET 요청 -->
-			<h5 class="mt-3">2. Variable Parameters</h5>
-			<div>
-			<form method="get" action="getMethodRequest" class="mt-3">
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">param1</span>
+				<h3 class="my-3">GET Method Request</h3>
+				<!-- 1. 고정된 매개변수 GET 요청 -->
+				<div class="d-flex justify-content-between">
+					<h5>1. Static Parameters</h5>
+					<a class="btn btn-dark" href="getMethodRequest?param1=blossom&param2=8&param3=1.618&param4=true&param5=1993-06-02">요청</a>
+				</div>	
+				<!-- 2. 입력받은 매개변수 GET 요청 -->
+				<h5 class="mt-3">2. Variable Parameters</h5>
+				<div>
+				<form method="get" action="getMethodRequest" class="mt-3">
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">param1</span>
+						</div>
+						<input type="text" name="param1" class="form-control text-secondary" value="문자열">
 					</div>
-					<input type="text" name="param1" class="form-control text-secondary" value="문자열">
-				</div>
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">param2</span>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">param2</span>
+						</div>
+						<input type="text" name="param2" class="form-control text-secondary" value="8">
 					</div>
-					<input type="text" name="param2" class="form-control text-secondary" value="8">
-				</div>
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">param3</span>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">param3</span>
+						</div>
+						<input type="text" name="param3" class="form-control text-secondary" value="1.618">
 					</div>
-					<input type="text" name="param3" class="form-control text-secondary" value="1.618">
-				</div>
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">param4</span>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">param4</span>
+						</div>
+						<div class="btn-group btn-group-toggle" data-toggle="buttons">
+							<label class="btn btn-outline-secondary">
+								<input type="radio" name="param4" value="true"> true
+							</label>
+							<label class="btn btn-outline-secondary">
+								<input type="radio" name="param4" checked value="false"> false
+							</label>
+						</div>
 					</div>
-					<div class="btn-group btn-group-toggle" data-toggle="buttons">
-						<label class="btn btn-outline-secondary">
-							<input type="radio" name="param4" value="true"> true
-						</label>
-						<label class="btn btn-outline-secondary">
-							<input type="radio" name="param4" checked value="false"> false
-						</label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">param5</span>
+						</div>
+						<input type="date" name="param5" class="form-control text-secondary"
+							value="1993-06-02">
 					</div>
-				</div>
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">param5</span>
+					<div class="d-flex justify-content-end">
+						<input class="mt-2 btn btn-dark" type="submit" value="요청"/>				
 					</div>
-					<input type="date" name="param5" class="form-control text-secondary"
-						value="1993-06-02">
+				</form>
 				</div>
-				<div class="d-flex justify-content-end">
-					<input class="mt-2 btn btn-dark" type="submit" value="Request"/>				
-				</div>
-			</form>
 			</div>
-			<h3 class="my-3">POST Method Request</h3>
+				
+			<!-- POST 방식으로 요청 -->
+			<div id="postMethodId" style="display: none;">
+				<h3 class="my-3">POST Method Request</h3>
+				<h5 class="mt-3">Variable Parameters</h5>
+				<div>
+				<form method="post" action="postMethodRequest" class="mt-3">
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">param1</span>
+						</div>
+						<input type="text" name="param1" class="form-control text-secondary" value="문자열">
+					</div>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">param2</span>
+						</div>
+						<input type="text" name="param2" class="form-control text-secondary" value="8">
+					</div>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">param3</span>
+						</div>
+						<input type="text" name="param3" class="form-control text-secondary" value="1.618">
+					</div>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">param4</span>
+						</div>
+						<div class="btn-group btn-group-toggle" data-toggle="buttons">
+							<label class="btn btn-outline-secondary">
+								<input type="radio" name="param4" value="true"> true
+							</label>
+							<label class="btn btn-outline-secondary">
+								<input type="radio" name="param4" checked value="false"> false
+							</label>
+						</div>
+					</div>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">param5</span>
+						</div>
+						<input type="date" name="param5" class="form-control text-secondary"
+							value="1993-06-02">
+					</div>
+					<div class="d-flex justify-content-end">
+						<input class="mt-2 btn btn-dark" type="submit" value="요청"/>				
+					</div>
+				</form>
+				</div>
 			</div>
 			
-			<!--  입력받은 매개변수 POST 요청 -->
-			<div id="postMethodId">
-			<h5 class="mt-3">Variable Parameters</h5>
-			<div>
-			<form method="post" action="postMethodRequest" class="mt-3">
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">param1</span>
-					</div>
-					<input type="text" name="param1" class="form-control text-secondary" value="문자열">
-				</div>
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">param2</span>
-					</div>
-					<input type="text" name="param2" class="form-control text-secondary" value="8">
-				</div>
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">param3</span>
-					</div>
-					<input type="text" name="param3" class="form-control text-secondary" value="1.618">
-				</div>
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">param4</span>
-					</div>
-					<div class="btn-group btn-group-toggle" data-toggle="buttons">
-						<label class="btn btn-outline-secondary">
-							<input type="radio" name="param4" value="true"> true
-						</label>
-						<label class="btn btn-outline-secondary">
-							<input type="radio" name="param4" checked value="false"> false
-						</label>
-					</div>
-				</div>
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">param5</span>
-					</div>
-					<input type="date" name="param5" class="form-control text-secondary"
-						value="1993-06-02">
-				</div>
-				<div class="d-flex justify-content-end">
-					<input class="mt-2 btn btn-dark" type="submit" value="Request"/>				
-				</div>
-			</form>
-			</div>
-			</div>
-			<div id="AjaxMethodId">
 			<!-- AJAX로 요청 -->
-			<h3 class="">AJAX Request</h3>
-			<!--  입력받은 매개변수 POST 요청 -->
+			<div id="ajaxMethodId" style="display: none;">
+			<h3 class="my-3">AJAX Request</h3>
 			<h5 class="my-3">Variable Parameters</h5>
 			<div>
 				<form id="form1" name="form1">
@@ -183,10 +194,74 @@
 	    <div class="my-5">&nbsp;</div>
 	
 		<script>
-			function methodButton() {
-				const getMethodButton = document.querySelector("geMethodId").value;
+			function getButton() {
+				const showGetMethod = document.getElementById("getMethodId");
+				const showPostMethod = document.getElementById("postMethodId");
+				const showAjaxMethod = document.getElementById("ajaxMethodId");
+				const changeGetColor = document.getElementById("getButtonId");
+				const changePostColor = document.getElementById("postButtonId");
+				const changeAjaxColor = document.getElementById("ajaxButtonId");
 				
-				console.log(getMethodButton);
+				if (showGetMethod.style.display == "none" || showGetMethod.style.display == "") {
+					showGetMethod.style.display = "block";
+					changeGetColor.style.backgroundColor = "white";
+					changeGetColor.style.color = "black";
+					
+					showPostMethod.style.display = "none";
+					changePostColor.style.backgroundColor = "black";
+					changePostColor.style.color = "white";
+					
+					showAjaxMethod.style.display = "none";
+					changeAjaxColor.style.backgroundColor = "black";
+					changeAjaxColor.style.color = "white";
+				} 
+				
+			}
+			
+			function postButton() {
+				const showGetMethod = document.getElementById("getMethodId");
+				const showPostMethod = document.getElementById("postMethodId");
+				const showAjaxMethod = document.getElementById("ajaxMethodId");
+				const changeGetColor = document.getElementById("getButtonId");
+				const changePostColor = document.getElementById("postButtonId");
+				const changeAjaxColor = document.getElementById("ajaxButtonId");
+				
+				if (showPostMethod.style.display == "none" || showPostMethod.style.display == "") {
+					showPostMethod.style.display = "block";
+					changePostColor.style.backgroundColor = "white";
+					changePostColor.style.color = "black";
+					
+					showAjaxMethod.style.display = "none";
+					changeAjaxColor.style.backgroundColor = "black";
+					changeAjaxColor.style.color = "white";
+					
+					showGetMethod.style.display = "none";
+					changeGetColor.style.backgroundColor = "black";
+					changeGetColor.style.color = "white";
+				} 
+			}
+			
+			function ajaxButton() {
+				const showGetMethod = document.getElementById("getMethodId");
+				const showPostMethod = document.getElementById("postMethodId");
+				const showAjaxMethod = document.getElementById("ajaxMethodId");
+				const changeGetColor = document.getElementById("getButtonId");
+				const changePostColor = document.getElementById("postButtonId");
+				const changeAjaxColor = document.getElementById("ajaxButtonId");
+				
+				if (showAjaxMethod.style.display == "none" || showAjaxMethod.style.display == "") {
+					showAjaxMethod.style.display = "block";
+					changeAjaxColor.style.backgroundColor = "white";
+					changeAjaxColor.style.color = "black";
+					
+					showPostMethod.style.display = "none";
+					changePostColor.style.backgroundColor = "black";
+					changePostColor.style.color = "white";
+					
+					showGetMethod.style.display = "none";
+					changeGetColor.style.backgroundColor = "black";
+					changeGetColor.style.color = "white";
+				} 
 			}
 		
 			function requestGet() {

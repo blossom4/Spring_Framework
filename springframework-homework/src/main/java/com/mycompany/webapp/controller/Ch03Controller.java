@@ -29,5 +29,16 @@ public class Ch03Controller {
 		logger.info("Date param5: " + dto.getParam5());
 		return "redirect:/ch03/content";
 	}
+	
+	@RequestMapping(value = "/postMethodRequest", method = RequestMethod.POST)
+	public String postMethodRequest(Ch03Dto dto) {
+		logger.info("Run ch03/postMethodRequest -> Redirect ch03/content");
+		logger.info("String param1: " + dto.getParam1());
+		logger.info("int param2: " + dto.getParam2());
+		logger.info("double param3: " + dto.getParam3());
+		logger.info("boolean param4: " + dto.isParam4());
+		logger.info("Date param5: " + dto.getParam5());
+		return "redirect:/ch03/content";
+	}
 
 }

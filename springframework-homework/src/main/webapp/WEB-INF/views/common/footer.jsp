@@ -8,7 +8,7 @@
 <body>
 
 	<!-- 하단 고정 footer -->
-	<footer class="d-flex justify-content-center fixed-bottom mb-2">
+	<footer class="d-flex justify-content-center fixed-bottom bg-light">
 		<div class="fs-5">Spring framework homework - Created by Youngshin Jo :)</div>
 	</footer>
 	

@@ -26,7 +26,7 @@
 				<div class="form-group mb-3">
 					<label for="exampleInputEmail1" class="fs-6 mb-1">Email address</label>
 					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-					<h5 class="text-muted fs-6 mt-1">▪ ID @ example.com</h5>					
+					<h5 class="text-muted fs-6 mt-1">▪ ID@example.com</h5>					
 					<h5 class="text-muted fs-6 mt-1">▪ We'll never share your email with anyone else.</h5>
 				</div>
 				<div class="form-group">

@@ -17,7 +17,7 @@
 		<!-- ch02/content 기본화면 구성 -->
 		<div class="container col-4" style="margin-top: 15vh;">
 		    <div class="mb-3 d-flex">
-				<h2>📢 방식별 메소드 매핑 - ch02/content</h2>
+				<h2>💠 방식별 메소드 매핑 - ch02/content</h2>
 		    </div>
 		    <!-- 입력 폼 / 버튼 -->
 		    <div class="input-group mt-3 mb-4">

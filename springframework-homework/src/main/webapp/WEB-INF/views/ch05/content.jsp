@@ -14,41 +14,43 @@
 		    <div class="mb-3 d-flex">
 				<h2>📝 HTTP 정보 읽기 및 설정 - ch05/content</h2>
 		    </div>
-		    <!-- 입력 폼 / 버튼 -->
-		    <div class="input-group mt-3 mb-4">
-		      <input class="form-control" type="text" placeholder="내용을 추가해주세요.">
-		      <button class="btn btn-dark" type="button" id="button-addon2">Add</button>
-		    </div>
+			
+			<hr class="my-3">
 		    
-			<div class="card-header">
-				요청 HTTP 헤더 정보 읽기
+			<h4 class="my-3">요청 HTTP 헤더 정보 읽기</h4>
+			<ul>
+				<li>Method</li>
+				<li>Request URI</li>
+				<li>Client IP</li>
+				<li>Context Root</li>
+				<li>User Agent</li>
+				<li>Client OS</li>
+				<li>Client Browser</li>
+			</ul>
+			<div class="d-flex justify-content-center">
+				<a href="getHeaderValue" class="btn btn-danger col-3">요청</a>
 			</div>
-			<div class="card-body">
-				<a href="getHeaderValue" class="btn btn-danger btn-sm">요청</a>
-			</div>
+			
+
+			<h4 class="mt-5 mb-3">쿠키 저장 및 읽기</h4>
+			<a href="createCookie" class="btn btn-danger">쿠키 생성</a>
+			<a href="getCookie1" class="btn btn-danger">쿠키 읽기1 (서버)</a>
+			<a href="getCookie2" class="btn btn-danger">쿠키 읽기2 (서버)</a>
+			<a href="#" class="btn btn-danger" onclick="getCookie()">쿠키 읽기 (Console.log)</a>
+			<hr/>
+			<a href="createJsonCookie" class="btn btn-danger">JSON 쿠키 생성</a>	
+			<a href="getJsonCookie" class="btn btn-danger">JSON 쿠키 읽기</a>	
+			<hr/>
+			<a href="createJwtCookie" class="btn btn-danger">JWT 쿠키 생성</a>	
+			<a href="getJwtCookie" class="btn btn-danger">JWT 쿠키 읽기</a>				
 		</div>
-		<div class="card m-2">
-			<div class="card-header">
-				쿠기 저장 및 읽기
-			</div>
-			<div class="card-body">
-				<a href="createCookie" class="btn btn-danger btn-sm">🍪 쿠키 생성</a>
-				<a href="getCookie1" class="btn btn-danger btn-sm">쿠기 읽기(서버)</a>
-				<a href="getCookie2" class="btn btn-danger btn-sm">쿠기 읽기(서버)</a>
-				<a href="#" class="btn btn-danger btn-sm" onclick="getCookie()">쿠기 읽기(JavaScript)</a>
-				<hr/>
-				<a href="createJsonCookie" class="btn btn-danger btn-sm">JSON 쿠기 생성</a>	
-				<a href="getJsonCookie" class="btn btn-danger btn-sm">JSON 쿠기 읽기</a>	
-				<hr/>
-				<a href="createJwtCookie" class="btn btn-danger btn-sm">JWT 쿠기 생성</a>	
-				<a href="getJwtCookie" class="btn btn-danger btn-sm">JWT 쿠기 읽기</a>				
-			</div>
-			<script>
-				function getCookie() {
-					console.log(document.cookie);
-				}
-			</script>
-		</div>
+		
+		<script>
+			function getCookie() {
+				console.log(document.cookie);
+			}
+		</script>
+
 
 
 </body>

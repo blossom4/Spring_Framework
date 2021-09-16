@@ -34,7 +34,7 @@ public class Ch05Controller {
 	
 	@GetMapping("/getHeaderValue")
 	public String getHeaderValue(HttpServletRequest request) {
-		logger.info("실행");
+		logger.info("Run ch05/getHeaderValue");
 		
 		logger.info("method: " + request.getMethod());
 		logger.info("requestURI: " + request.getRequestURI());
@@ -65,9 +65,9 @@ public class Ch05Controller {
 	
 	@GetMapping("/createCookie")
 	public String createCookie(HttpServletResponse response) {
-		logger.info("실행");
+		logger.info("Run ch05/createCookie");
 		
-		Cookie cookie = new Cookie("useremail", "alternative3@naver.com"); // 쿠키의 값은 꼭 문자열이어야 함!!
+		Cookie cookie = new Cookie("useremail", "blossom3@gmail.com"); // 쿠키의 값은 꼭 문자열이어야 함!!
 		cookie.setDomain("localhost");
 		cookie.setPath("/");
 		cookie.setMaxAge(30*60); // 저장에 대한 제한시간 설정
@@ -79,19 +79,19 @@ public class Ch05Controller {
 	}
 	
 	@GetMapping("/getCookie1")
-	public String getCookie1(@CookieValue String useremail, // 매개변수명과 쿠키 이름일 같을 경우
-							 @CookieValue("useremail") String uemail) { // 매개변수명과 쿠키 이름을 다르게 사용하고 싶을 경우
-		logger.info("실행");
+	public String getCookie1(// @CookieValue String useremail, // 매개변수명과 쿠키 이름일 같을 경우
+							 @CookieValue("useremail") String userEmail) { // 매개변수명과 쿠키 이름을 다르게 사용하고 싶을 경우
+		logger.info("Run ch05/getCookie1");
 		
-		logger.info("useremail: " + useremail);
-		logger.info("uemail: " + uemail);
+//		logger.info("useremail: " + useremail);
+		logger.info("useremail: " + userEmail);
 		
 		return "redirect:/ch05/content";
 	}
 	
 	@GetMapping("/getCookie2")
 	public String getCookie2(HttpServletRequest request) {
-		logger.info("실행");
+		logger.info("Run ch05/getCookie2");
 		
 		Cookie[] cookies = request.getCookies();
 		
@@ -109,15 +109,15 @@ public class Ch05Controller {
 	
 	@GetMapping("/createJsonCookie")
 	public String createjsonCookie(HttpServletResponse response) throws Exception {
-		logger.info("실행");
+		logger.info("Run ch05/createJsonCookie");
 		
 		// String json = "{\"userid\":\"fall\", \"useremail\":\"fall@company.com\", \"username\":\"홍길동\"}";
 		
 		// 위와 동일한 결과를 얻을 수 있음!
 		JSONObject jsonObject = new JSONObject(); // 생성
-		jsonObject.put("userid", "fall");
-		jsonObject.put("useremail", "fall@company.com");
-		jsonObject.put("username", "홍길동");
+		jsonObject.put("userid", "jsonCookie3");
+		jsonObject.put("useremail", "jsonCookie3@gmail.com");
+		jsonObject.put("username", "영신");
 		String json = jsonObject.toString();
 		logger.info("json: " + json);
 		json = URLEncoder.encode(json, "UTF-8"); // "로 인한 오류 때문에인코딩!
@@ -132,7 +132,7 @@ public class Ch05Controller {
 	
 	@GetMapping("/getJsonCookie")
 	public String getJsonCookie(@CookieValue String user) {
-		logger.info("실행");
+		logger.info("Run ch05/getJsonCookie");
 		
 		logger.info("user: " + user);
 		
@@ -151,9 +151,9 @@ public class Ch05Controller {
 	public String createJwtCookie(HttpServletResponse response) throws Exception {
 		logger.info("실행");
 		
-		String userid = "fall";
-		String useremail = "fall@company.com";
-		String username = "홍길동";
+		String userid = "jwtCookie3";
+		String useremail = "jwtCookie3@gmail.com";
+		String username = "영신";
 		
 		JwtBuilder builder = Jwts.builder();
 		// ▼ Header

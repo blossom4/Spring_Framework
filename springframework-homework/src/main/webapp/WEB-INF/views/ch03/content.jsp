@@ -11,18 +11,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style type="text/css">
-	.displayOn {
-		background-color: red;
-	}
-  </style>
 </head>
 <body>
 	
 		<!-- ch03/content 화면 기본구성 -->
 		<div class="container col-4" style="margin-top: 15vh;">
 		    <div class="mb-3 d-flex">
-				<h2>🎵 매개변수 요청 - ch03/content</h2>
+				<h2>📢 매개변수 요청 - ch03/content</h2>
 		    </div>
 			<hr class="my-3">
 			<div class="d-flex justify-content-center">

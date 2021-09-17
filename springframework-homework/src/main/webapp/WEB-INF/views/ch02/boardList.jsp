@@ -17,7 +17,7 @@
 		<!-- ch02/boardList 화면 기본구성 -->
 		<div class="container col-4" style="margin-top: 15vh;">
 		    <div class="mb-3 d-flex">
-				<h2>📌게시물 목록 - ch02/boardList</h2>
+				<h2>📌 게시물 목록 - ch02/boardList</h2>
 		    </div>
    			<hr>
    			<div class="d-flex justify-content-between mb-3">
@@ -29,7 +29,7 @@
 					</div>
 				</div>
    			</div>
-			
+
 			<div class="my-2">
 				<table class="table">
 					<thead>

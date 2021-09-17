@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
     
 <!-- 네이게이션 바 -->
 <%@ include file="/WEB-INF/views/common/navbar.jsp"%>
@@ -14,22 +19,18 @@
 </head>
 <body>
 	
-		<!-- ch01/content 화면 기본구성 -->
+		<!-- ch07/argumentRead 화면 기본구성 -->
 		<div class="container col-4" style="margin-top: 15vh;">
 		    <div class="mb-3 d-flex">
-				<h2>✖ 예시 화면 - ch01/content</h2>
+				<h2>🚀 Data Delivery - ch07/argumentRead</h2>
 		    </div>
-		    <!-- 입력 폼 / 버튼 -->
-		    <div class="input-group mt-3 mb-4">
-		      <input class="form-control" type="text" placeholder="내용을 추가해주세요.">
-		      <button class="btn btn-dark" type="button" id="button-addon2">Add</button>
-		    </div>
-
-		    <!-- 목록 -->
-		    <div class="text-center" style="margin-top: 15vh;">
-   				<h3>There is no content.</h3>
-		    </div>
-			
+			<hr class="my-3">
+			<h4>@ModelAttribute로 전달된 매개변수 값 읽기</h4>
+			<h4 class="my-3">Cloth</h4>
+			<ul class="fs-5">
+				<li>Kind: ${cloth.kind}</li>
+				<li>Sex: ${cloth.sex}</li>
+			</ul>
 	    </div>
 	
 </body>

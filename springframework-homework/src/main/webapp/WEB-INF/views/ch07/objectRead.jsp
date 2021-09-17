@@ -14,21 +14,18 @@
 </head>
 <body>
 	
-		<!-- ch01/content 화면 기본구성 -->
+		<!-- ch07/objectRead 화면 기본구성 -->
 		<div class="container col-4" style="margin-top: 15vh;">
 		    <div class="mb-3 d-flex">
-				<h2>✖ 예시 화면 - ch01/content</h2>
+				<h2>🚀 Data Delivery - ch07/objectRead</h2>
 		    </div>
-		    <!-- 입력 폼 / 버튼 -->
-		    <div class="input-group mt-3 mb-4">
-		      <input class="form-control" type="text" placeholder="내용을 추가해주세요.">
-		      <button class="btn btn-dark" type="button" id="button-addon2">Add</button>
-		    </div>
-
-		    <!-- 목록 -->
-		    <div class="text-center" style="margin-top: 15vh;">
-   				<h3>There is no content.</h3>
-		    </div>
+			<hr class="mt-3 mb-4">
+			<h3 class="mb-4">Expressions Language - Object 데이터 출력</h3>
+			<h4 class="my-3">•방법: ${member.method}</h4>
+			<h4 class="my-3">•이름: ${member.name}</h4>
+			<h4 class="my-3">•나이: ${member.age}</h4>
+			<h4 class="my-3">•직업: ${member.job}</h4>	
+			<h4 class="my-3">•도시: ${member.city.name}</h4>	
 			
 	    </div>
 	

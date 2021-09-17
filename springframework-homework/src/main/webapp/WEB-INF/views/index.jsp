@@ -11,15 +11,10 @@
 	<title>Index</title>
 	<style>
   	
-	  	.paginator {
-		  transition: 0.1s;
+ 	  	.paginator {
+		  transition: 0.5s;
 		  cursor: pointer;
 	  	}
-	  	.paginator:active {
-		  transform: scale(0.1);
-		  opacity: 0.5;
-	  	}
-	  	
   	
     </style>
 </head>
@@ -27,7 +22,8 @@
 		<!-- index 화면 기본구성 -->
 		<div class="container col-4" style="margin-top: 15vh;">
 		    <div class="mb-3 d-flex">
-				<h2>🍏 스프링 프레임워크 연습목록 - index</h2>
+		    	<h2 class="pop">🍏&nbsp;</h2>
+				<h2>스프링 프레임워크 연습목록 - index</h2>
 		    </div>
 		    <!-- 입력 폼 / 버튼 -->
 		    <div class="input-group mt-3 mb-4">
@@ -65,28 +61,33 @@
 				<a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch06/content">></a>
 			</div>
 			<div class="d-flex justify-content-between">
-				<h3><a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch07/content">ch07. 💾 객체(데이터) 사용 범위</a></h3>
+				<h3><a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch07/content">ch07. 🚀 Data Delivery</a></h3>
 				<a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch07/content">></a>
 			</div>
 			</div>			
 			
 	    </div>
-	    
+	    <div class="d-flex justify-content-center fs-5 fixed-bottom" style="margin-bottom: 18vh;">CLICK 👇</div>
 		<div class="mt-5 d-flex justify-content-center fixed-bottom" style="margin-bottom: 10vh;">
-			<h2 class="paginator" onclick="changePage1()">1</h2>
+			<h2 id="changeSize1" class="paginator ms-5" onclick="changePage1()">1페이지</h2>
 			<div class="mx-1">&nbsp;</div>
-			<h2 class="paginator" onclick="changePage2()">2</h2>
+			<h2 id="changeSize2" class="paginator" style="font-size: calc(0.325rem + .9vw);" onclick="changePage2()">2페이지</h2>
 		</div>
 	    
 	    <script>
 	    	function changePage1() {
 	    		const movePage1 = document.getElementById("page1");
 	    		const movePage2 = document.getElementById("page2");
-
+	    		const changeSize1 = document.getElementById("changeSize1")
+	    		const changeSize2 = document.getElementById("changeSize2")
+	    	
+				console.log(changeSize1.style.fontSize)
 	    		console.log("page1 Click")
 	    		if (movePage1.style.display == "none") {
 	    			movePage1.style.display = "block";
 	    			movePage2.style.display = "none";
+	    			changeSize1.style.fontSize = "calc(1.325rem + .9vw)";
+	    			changeSize2.style.fontSize = "calc(0.325rem + .9vw)";
 	    		} 
 
 	    	}
@@ -97,8 +98,10 @@
 
 	    		console.log("page2 Click")
 	    		if (movePage2.style.display == "none") {
-	    			movePage2.style.display = "block";
 	    			movePage1.style.display = "none";
+	    			movePage2.style.display = "block";
+	    			changeSize1.style.fontSize = "calc(0.325rem + .9vw)";
+	    			changeSize2.style.fontSize = "calc(1.325rem + .9vw)";
 	    		} 
 
 	    	}

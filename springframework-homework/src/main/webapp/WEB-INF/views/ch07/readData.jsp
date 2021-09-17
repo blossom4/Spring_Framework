@@ -13,22 +13,20 @@
   <title>Document</title>
 </head>
 <body>
+	
+		<!-- ch07/readData 화면 기본구성 -->
+		<div class="container col-4" style="margin-top: 15vh;">
+		    <div class="mb-3 d-flex">
+				<h2>🚀 Data Delivery - ch07/readData</h2>
+		    </div>
+			<hr class="mt-3 mb-4">
 
-	<!-- ch06/forward 화면 기본구성 -->
-	<div class="container col-4" style="margin-top: 15vh;">
-	    <div class="mb-3 d-flex">
-			<h2>➡ Forward방식과 Redirect방식 - ch06/forward</h2>
-	    </div>
+			<h3 class="mb-4">객체(데이터) 사용 범위</h3>
+			<h4 class="my-3">1. Request범위에서 읽기: ${requestData}</h4>
+			<h4 class="my-3">2. Session범위에서 읽기: ${sessionData}</h4>
+			<h4 class="my-3">3. Application범위에서 읽기: ${applicationData}</h4>			
 
-	    <div class="text-center" style="margin-top: 15vh; margin-bottom: 10vh;">
-			<h3>Forward Request Success :)</h3>
 	    </div>
-	    
-	    <div class="d-flex justify-content-center my-5">
-	    	<a href="/ch06/content" class="btn btn-dark col-3">Go Back</a>
-	    </div>
-		
-    </div>
 	
 </body>
 </html>

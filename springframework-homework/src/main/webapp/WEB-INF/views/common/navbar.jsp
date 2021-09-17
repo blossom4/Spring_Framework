@@ -21,9 +21,14 @@
   	  font-family: 'NanumBarunpen';
   	}
   	
-/*   	.mainColor {
-  		background-color: rgb(155, 216, 173);
-  	} */
+  	.pop {
+  		transition: 0.1s;
+  		cursor: pointer;
+  	}
+  	.pop:active {
+	  transform: scale(0.1);
+	  opacity: 0.5;
+  	}
   	
   </style>
 </head>

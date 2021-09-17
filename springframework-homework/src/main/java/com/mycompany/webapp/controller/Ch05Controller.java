@@ -71,7 +71,7 @@ public class Ch05Controller {
 		cookie.setDomain("localhost");
 		cookie.setPath("/");
 		cookie.setMaxAge(30*60); // 저장에 대한 제한시간 설정
-//		cookie.setHttpOnly(true); // js에서 못읽도록 막음! 체크 처리 됨 -> httpOnly
+		cookie.setHttpOnly(true); // js에서 못읽도록 막음! 체크 처리 됨 -> httpOnly
 		cookie.setSecure(true);  // https://만 전송 가능하도록 함
 		response.addCookie(cookie);
 		

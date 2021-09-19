@@ -68,6 +68,10 @@
 				<h3><a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch08/content">ch08. 🍪 Session Support</a></h3>
 				<a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch08/content">></a>
 			</div>
+			<div class="d-flex justify-content-between">
+				<h3><a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch09/content">ch09. 📁 File UpLoad & DownLoad</a></h3>
+				<a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch09/content">></a>
+			</div>
 			</div>			
 			
 	    </div>

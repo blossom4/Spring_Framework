@@ -52,14 +52,14 @@
 				<h3><a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch05/content">ch05. 📝 HTTP 정보 읽기 및 설정</a></h3>
 				<a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch05/content">></a>
 			</div>
-			</div>
-			
-			<!-- Index Page 2 -->
-			<div id="page2" style="display: none;">
 			<div class="d-flex justify-content-between">
 				<h3><a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch06/content">ch06. ➡ Forward방식과 Redirect방식</a></h3>
 				<a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch06/content">></a>
 			</div>
+			</div>
+			
+			<!-- Index Page 2 -->
+			<div id="page2" style="display: none;">
 			<div class="d-flex justify-content-between">
 				<h3><a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch07/content">ch07. 🚀 Data Delivery</a></h3>
 				<a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch07/content">></a>
@@ -71,6 +71,14 @@
 			<div class="d-flex justify-content-between">
 				<h3><a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch09/content">ch09. 📁 File UpLoad & DownLoad</a></h3>
 				<a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch09/content">></a>
+			</div>
+			<div class="d-flex justify-content-between">
+				<h3><a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch10/content">ch10. 🚨 예외 처리</a></h3>
+				<a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch10/content">></a>
+			</div>
+			<div class="d-flex justify-content-between">
+				<h3><a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch11/content">ch11. 🔖 String Tag Library</a></h3>
+				<a class="text-decoration-none text-dark fs-4 my-1" href="${pageContext.request.contextPath}/ch11/content">></a>
 			</div>
 			</div>			
 			

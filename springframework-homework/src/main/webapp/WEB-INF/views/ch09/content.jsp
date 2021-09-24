@@ -31,19 +31,22 @@
 					<input type="text" class="form-control" id="desc" name="desc" placeholder="설명">
 				</div>
 				<div class="form-group my-3">
-					<label for="attach">Example file input</label> <input type="file"
-						class="form-control-file" id="attach" name="attach" multiple>
+					<label for="attach"></label> 
+					<input type="file" class="form-control-file" id="attach" name="attach" multiple>
 				</div>
-				<button class="btn btn-dark btn-sm" type="submit">파일 업로드</button>
+				<button class="btn btn-dark btn-sm">파일 업로드</button>
 				<a href="javascript:fileupload()" class="btn btn-dark btn-sm">AJAX 파일 업로드</a>
 			</form>
-			
+			<div>
 			<h4 class="my-3">File Download</h4>
-			<a href="filedownload?fileNo=1"
-			   class="btn btn-info btn-sm">파일 다운로드</a>
-			<hr/>
-			<img src="filedownload?fileNo=1" width="200px"/>
+			<a href="filedownload?fileNo=1" class="btn btn-dark btn-sm">파일 다운로드</a>
+			</div>
+			<div class="d-flex justify-content-center">
+				<img src="filedownload?fileNo=1" style="width: 10vw;"/>
+			</div>
 	    </div>
+	    
+	    
 	    
 		<script>
 		

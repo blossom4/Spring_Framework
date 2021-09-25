@@ -25,23 +25,23 @@
 			<h4 class="my-3">1. DTO 객체(Command Object)와 폼 연결</h4>
 			<form:form method="post" modelAttribute="member">
 			  <div class="form-group  mb-2">
-			    <label for="mid">ID</label>
+			    <label for="mid">아이디</label>
 			    <form:input type="text" class="form-control" path="mid"/> <!-- path 태그가 id와 name을 자동 생성함 -->
 			  </div>
 			  <div class="form-group  mb-2">
-			    <label for="mname">Name</label>
+			    <label for="mname">이름</label>
 			    <form:input type="text" class="form-control" id="mname" name="mname" path="mname"/>
 			  </div>
 			  <div class="form-group  mb-2">
-			    <label for="mpassword">Password</label>
+			    <label for="mpassword">비밀번호</label>
 			    <form:password class="form-control" id="mpassword" path="mpassword"/>
 			  </div>
 			  <div class="form-group  mb-2">
-			    <label for="mnation">Nation</label>
+			    <label for="mnation">국가</label>
 			    <form:input type="text" class="form-control" id="mnation" path="mnation"/>
 			  </div>
 			  <div class="d-flex justify-content-end mt-2">
-			  	<button type="submit" class="btn btn-dark">Submit</button>
+			  	<button type="submit" class="btn btn-dark">제출</button>
 			  </div>
 			</form:form>
 

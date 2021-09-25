@@ -26,19 +26,19 @@
 			</div>
 			<div class="d-flex justify-content-between my-3">
 				<h5>2. DTO 객체의 필드값을 양식의 드롭다운리스트(select 태그)로 세팅</h5>
-				<a href="form1" class="btn btn-dark btn-sm">form2</a>
+				<a href="form2" class="btn btn-dark btn-sm">form2</a>
 			</div>
 			<div class="d-flex justify-content-between my-3">
 				<h5>3. DTO 객체의 필드값을 양식의 드롭다운리스트(checkbox 태그)로 세팅</h5>
-				<a href="form1" class="btn btn-dark btn-sm">form3</a>
+				<a href="form3" class="btn btn-dark btn-sm">form3</a>
 			</div>
 			<div class="d-flex justify-content-between my-3">
 				<h5>4. DTO 객체의 필드값을 양식의 드롭다운리스트(radio 태그)로 세팅</h5>
-				<a href="form1" class="btn btn-dark btn-sm">form4</a>
+				<a href="form4" class="btn btn-dark btn-sm">form4</a>
 			</div>
 			<div class="d-flex justify-content-between my-3">
 				<h5>5. 국제화를 적용한 폼</h5>
-				<a href="form1" class="btn btn-dark btn-sm">form5</a>
+				<a href="form5" class="btn btn-dark btn-sm">form5</a>
 			</div>
 	    </div>
 	

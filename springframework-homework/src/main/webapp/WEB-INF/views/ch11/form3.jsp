@@ -29,7 +29,7 @@
 			<form method="get" action="form3">
 				<div>
 					<c:forEach var="language" items="${languageList}" varStatus="status">
-					<span class="mx-2">
+					<span class="mxfkdleld-2">
 						<input type="checkbox" id="lang${status.count}" name="mlanguage" value="${language}"
 					  		<c:forEach var="temp" items="${member.mlanguage}">
 				  		 		<c:if test="${temp == language}">checked</c:if>

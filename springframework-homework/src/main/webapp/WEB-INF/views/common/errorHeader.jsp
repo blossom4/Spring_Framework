@@ -21,19 +21,7 @@
   	  font-family: 'NanumBarunpen';
   	}
   	
-  	.pop {
-  		transition: 0.1s;
-  		cursor: pointer;
-  	}
-  	.pop:active {
-	  transform: scale(0.1);
-	  opacity: 0.5;
-  	}
-  	
-  	.reverseColor {
-  	
-  	}
-  	
+	
 
   	
   </style>
